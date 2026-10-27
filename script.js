@@ -21,27 +21,27 @@ const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
 
 // Update this address in both the visible link and its mailto: target before publishing.
-const portfolioEmail = "YOUR_EMAIL@example.com";
+const portfolioEmail = "theadeyemianu@gmail.com";
 const emailLink = document.getElementById("email-link");
 const copyButton = document.getElementById("copy-email");
 const copyStatus = document.getElementById("copy-status");
 
-if (emailLink && portfolioEmail !== "YOUR_EMAIL@example.com") {
+if (emailLink && portfolioEmail !== "theadeyemianu@gmail.com") {
   emailLink.textContent = portfolioEmail + " ↗";
   emailLink.href = `mailto:${portfolioEmail}`;
 }
 
 if (copyButton) {
   copyButton.addEventListener("click", async () => {
-    if (portfolioEmail === "YOUR_EMAIL@example.com") {
-      copyStatus.textContent = "Add your email address in script.js before using this feature.";
+    if (portfolioEmail === "theadeyemianu@gmail.com") {
+     ;
       return;
     }
     try {
       await navigator.clipboard.writeText(portfolioEmail);
       copyStatus.textContent = "Email copied to clipboard.";
     } catch {
-      copyStatus.textContent = `Your email address is ${portfolioEmail}`;
+      ;
     }
   });
 }
